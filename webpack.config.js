@@ -24,12 +24,17 @@ module.exports = {
 						}
 					}
 				]
+			},
+			{
+				test: /\.scss$/,
+				use: ['style-loader', 'css-loader', 'sass-loader']
+				
 			}
 		]
 	},
 
 	resolve: {
-		extensions: [".js", ".json", ".jsx", ".css"]
-	}
+		extensions: [".js", ".json", ".jsx", ".scss"]
+	},
 }
 

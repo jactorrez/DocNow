@@ -9,7 +9,7 @@ const NavBar = (props) => (
 				<p>Questions? Call <a href="#">888-321-3213</a> or <a href="#">Live Chat</a></p>
 			</div>
 			<div className="navbar-bottom">
-				<div class="navbar-logo"><a href="#">DocNow</a></div>
+				<div className="navbar-logo"><a href="#">DocNow</a></div>
 				<ul>
 					<li>Home</li>
 					<li>Doctors</li>
