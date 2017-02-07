@@ -1,20 +1,19 @@
 import React from "react";
 
-
 const NavBar = (props) => (
 	<div>
 		<div className="navbar">
 			<div className="navbar-top">
-				<a href="#">Download Our App</a>
-				<p>Questions? Call <a href="#">888-321-3213</a> or <a href="#">Live Chat</a></p>
+				<a className="link" href="#">Download Our App</a>
+				<p>Questions? Call <a className="link" href="#">888-321-3213</a> or <a className="link" href="#">Live Chat</a></p>
 			</div>
 			<div className="navbar-bottom">
-				<div className="navbar-logo"><a href="#">DocNow</a></div>
-				<ul>
-					<li>Home</li>
-					<li>Doctors</li>
-					<li>Locations</li>
-					<li>Contact Us</li>
+				<div className="logo-container"><a className="navbar-logo" href="#">DocNow</a></div>
+				<ul className="navbar-list">
+					<li><a className="active" href="#">Home</a></li>
+					<li><a href="#">Doctors</a></li>
+					<li><a href="#">Locations</a></li>
+					<li><a href="#">Contact Us</a></li>
 					<li><a href="#">Log In/Register</a></li>
 				</ul>
 

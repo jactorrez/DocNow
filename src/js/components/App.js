@@ -1,10 +1,8 @@
 // Libraries
 import React from "react";
 import { Router, Route, hashHistory, IndexRoute } from "react-router";
-import "../../scss/styles.scss";
 
 // Components 
-
 import NavBar from "./partials/NavBar";
 
 var App = () => (
