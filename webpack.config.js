@@ -33,12 +33,24 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader']
+			},
+			{
+				test: /\.(png|jpg)$/,
+				use: {
+					loader: 'url-loader',
+					options: {
+						limit: 25000,
+						name: "[name]-[hash:6].[ext]",
+						outputPath: "../img/"
+					}
+				}
 			}
 		]
 	},
 
 	resolve: {
-		extensions: [".js", ".json", ".jsx", ".scss"]
+		extensions: [".js", ".json", ".jsx", ".scss", ".png", ".jpg", ".jpeg"],
+		modules: ["node_modules", path.resolve(__dirname, "src/img/")]
 	},
 }
 

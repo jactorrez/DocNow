@@ -39,6 +39,7 @@ p{
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 2rem;
+	height: 3rem;
 
 	.logo-container{
 		display: inline-block;
@@ -65,16 +66,32 @@ p{
 			margin-right: 4rem;
 
 			a{
-				color: $text-inactive-grey;
+				color: $text-inactive-grey;	
 
 				&.active{
 					color: $text-blue;
+				}
+
+				&:hover{
+					color: $text-blue;
+				}
+			}
+
+			a.btn-border{
+				&:hover{
+					background-color: $text-green;
+					color: white;
+					
 				}
 			}
 		}
 
 		li:last-of-type{
 			margin-right: 0;
+		}
+
+		li .btn{
+			color: $text-green;
 		}
 	}
 

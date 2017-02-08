@@ -14,9 +14,8 @@ const NavBar = (props) => (
 					<li><a href="#">Doctors</a></li>
 					<li><a href="#">Locations</a></li>
 					<li><a href="#">Contact Us</a></li>
-					<li><a href="#">Log In/Register</a></li>
+					<li><a className="btn btn-border" href="#">Log In/Register</a></li>
 				</ul>
-
 			</div>
 		</div>
 		{props.children}
