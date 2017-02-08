@@ -1,5 +1,5 @@
 import React from "react"; 
-import coverImg from "home-cover";
+import coverImg from "home-cover2";
 
 const Home = () => (
 	<div>

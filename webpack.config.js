@@ -41,7 +41,8 @@ module.exports = {
 					options: {
 						limit: 25000,
 						name: "[name]-[hash:6].[ext]",
-						outputPath: "../img/"
+						outputPath: "../img/",
+						publicPath: "dist/img/"
 					}
 				}
 			}

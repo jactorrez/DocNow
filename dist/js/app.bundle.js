@@ -12002,8 +12002,8 @@ if(false) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_home_cover__ = __webpack_require__(239);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_home_cover___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_home_cover__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_home_cover2__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_home_cover2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_home_cover2__);
 
 
 
@@ -12016,7 +12016,7 @@ const Home = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 			"header",
 			null,
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: __WEBPACK_IMPORTED_MODULE_1_home_cover___default.a })
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: __WEBPACK_IMPORTED_MODULE_1_home_cover2___default.a })
 		)
 	)
 );
@@ -27012,7 +27012,7 @@ function updateLink(linkElement, obj) {
 /* 239 */
 /***/ (function(module, exports) {
 
-module.exports = "dist/img/home-cover-805774.png";
+module.exports = "dist/img/home-cover2-ec25ef.jpg";
 
 /***/ }),
 /* 240 */
