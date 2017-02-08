@@ -19,9 +19,7 @@ p{
 }
 
 .navbar{
-	padding: 0.5rem 2rem 1rem; 
-
-
+	padding: 0 2rem 1rem; 
 }
 
 .navbar-top{
@@ -38,7 +36,7 @@ p{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 	height: 3rem;
 
 	.logo-container{
