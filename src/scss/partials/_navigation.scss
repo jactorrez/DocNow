@@ -5,7 +5,7 @@ a{
 	font-weight: 600;
 	
 	&.link{
-		color: $text-green;
+		color: $color-green;
 	}
 }
 
@@ -15,7 +15,7 @@ p{
 	font-weight: 600;
 	display: inline-block;
 	margin-left: 2rem;
-	color: $text-blue;
+	color: $color-blue;
 }
 
 .navbar{
@@ -47,7 +47,7 @@ p{
 	.navbar-logo{
 		font-size: 1.7rem;
 		text-decoration: none;
-		color: $text-dark-blue;
+		color: $color-dark-blue;
 		font-weight: 700;
 	}
 
@@ -64,22 +64,21 @@ p{
 			margin-right: 4rem;
 
 			a{
-				color: $text-inactive-grey;	
+				color: $color-inactive-grey;	
 
 				&.active{
-					color: $text-blue;
+					color: $color-blue;
 				}
 
 				&:hover{
-					color: $text-blue;
+					color: $color-blue;
 				}
 			}
 
 			a.btn-border{
 				&:hover{
-					background-color: $text-green;
+					background-color: $color-green;
 					color: white;
-					
 				}
 			}
 		}
@@ -89,7 +88,7 @@ p{
 		}
 
 		li .btn{
-			color: $text-green;
+			color: $color-green;
 		}
 	}
 

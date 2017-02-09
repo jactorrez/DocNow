@@ -45,12 +45,16 @@ module.exports = {
 						publicPath: "dist/img/"
 					}
 				}
+			},
+			{
+				test: /\.svg$/,
+				loader: 'svg-sprite-loader'
 			}
 		]
 	},
 
 	resolve: {
-		extensions: [".js", ".json", ".jsx", ".scss", ".png", ".jpg", ".jpeg"],
+		extensions: [".js", ".json", ".jsx", ".scss", ".png", ".jpg", ".jpeg", ".svg"],
 		modules: ["node_modules", path.resolve(__dirname, "src/img/")]
 	},
 }

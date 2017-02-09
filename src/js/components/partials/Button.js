@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = (props) => {
 
-	let btnClass = `btn ${props.buttonType}`;
+	let btnClass = `btn ${props.buttonClass}`;
 
 	if(!props.submitButton){
 		return (

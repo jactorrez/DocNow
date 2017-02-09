@@ -1,24 +1,46 @@
 .btn{
 	padding: 0.5rem;
+	font-family: "Open Sans", sans-serif;
 	border-radius: 4px;
 	transition: all 0.4s ease-out;
 }
 
 .btn-border{
-	border: 1px solid $text-green;
+	border: 1px solid $color-green;
 }
 
-.base{
+.btn-base{
 	background-color: white;
-	color: $text-blue;
-	font-family: "Open Sans", sans-serif;
+	color: $color-blue;
+	
 	font-weight: 600;
 	padding: 0.5rem 1rem;
 }
 
-.success{
+.btn-success{
 	border: 0;
-	background-color: $text-green;
+	background-color: $color-green;
 	color: white;
 	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+.btn-find{
+	padding: 0.6rem 0.8rem; 
+
+	&::before{
+		font-family: "FontAwesome";
+		content: "\f002";
+		font-size: 0.75rem;
+		color: white;
+		margin-right: 0.5rem;
+	}
+
+	&:hover{
+		background-color: $color-dark-green;
+	}
+
+	span{
+		font-weight: 600;
+	}
 }
