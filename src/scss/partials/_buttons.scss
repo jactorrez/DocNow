@@ -7,3 +7,18 @@
 .btn-border{
 	border: 1px solid $text-green;
 }
+
+.base{
+	background-color: white;
+	color: $text-blue;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 600;
+	padding: 0.5rem 1rem;
+}
+
+.success{
+	border: 0;
+	background-color: $text-green;
+	color: white;
+	font-size: 0.9rem;
+}

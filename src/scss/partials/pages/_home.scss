@@ -1,59 +1,133 @@
+
+/* --------- Hero Section ---------- */
+
 .hero-container{
-	height: 400px;
+	height: 420px;
 }
 
 .hero{
+	position: relative;
 	background-image: url('../img/home-cover2');
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
 	overflow: hidden;
+
+		&::before{
+			font-family: "FontAwesome";
+			content: "\f053";
+			position: absolute;
+			top: 50%;
+			left: 40px;
+			transform: translateY(-50%);
+			font-size: 1.2rem;
+			color: $color-grey;
+			transition: all 0.5s ease;
+
+			&:hover{
+				color: red;
+			}
+		}
+
+		&::after{
+			font-family: "FontAwesome";
+			content: "\f054";
+			position: absolute;
+			top: 50%;
+			right: 40px;
+			transform: translateY(-50%);
+			font-size: 1.2rem;
+			color: $color-grey;
+		}
 }
 
-.slideshow{
-	position: relative;
-	padding: 0;
-	margin: 0;
-	top: 50%;
-	transform: translateY(-50%);
+	/* ----- Slideshow Container----- */
 
+	.slideshow{
+		position: relative;
+		padding: 0;
+		margin: 0;
+		top: 45%;
+		transform: translateY(-50%);
 
-	.slide{
-		border: 1px solid transparent;
-		width: 50%;
-		margin-left: 10rem;
+		.slide{
+			border: 1px solid transparent;
+			width: 50%;
+			margin-left: 10rem;
 
-		h1{
+			h1{
+				color: $text-blue;
+				margin-bottom: 1rem;
+				margin-top: 0;
+			}
+
+			p{
+				margin: 0;
+				margin-bottom: 2rem;
+				line-height: 1.5rem;
+			}
+		}
+
+		
+	}
+
+	/* ------ Search Conatiner ----- */
+
+	.search-container{
+		border-radius: 5px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 200px;
+		width: 80%;
+		background: linear-gradient(to top right, white, rgba(255,255,255, 0.8));
+		margin-top: -50px;
+		padding: 1rem;
+	} 
+
+	.search-content{
+		text-align: center;
+			h4{
+				color: $text-dark-blue;
+				font-weight: 700;
+				font-family: "Open Sans", sans-serif;
+			}
+	}
+
+	.search-form{
+
+		.btn-submit{
+			padding: 0.7rem 1.2rem; 
+		}
+
+		.input-long{
+			width: 270px;
+		}
+	}
+
+	.form-group{
+		display: inline-block;
+		text-align: left;
+		margin-right: 1rem;
+		vertical-align: bottom;
+
+		label{
 			color: $text-blue;
-			margin-bottom: 1rem;
-			margin-top: 0;
+			font-family: "Open Sans", sans-serif;
+			display: block;
+			font-weight: 700;
+			font-size: 0.9rem;
+			margin-bottom: 0.5rem;
 		}
 
-		p{
-			margin: 0;
-			line-height: 1.5rem;
+		input, .input-select{
+			padding: 0.5rem;
+			border: 1px solid rgba(black, 0.2);
+			font-size: 0.9rem;
+			font-family: "Open Sans", sans-serif;
+		}
+
+		.input-select{
+			padding: 0.4rem;
 		}
 	}
-
-	&::before{
-		font-family: "FontAwesome";
-		content: "\f053";
-		position: absolute;
-		top: 50%;
-		left: 40px;
-		transform: translateY(-50%);
-		font-size: 1.2rem;
-		color: $color-grey;
-	}
-
-	&::after{
-		font-family: "FontAwesome";
-		content: "\f054";
-		position: absolute;
-		top: 50%;
-		right: 40px;
-		transform: translateY(-50%);
-		font-size: 1.2rem;
-		color: $color-grey;
-	}
-}
