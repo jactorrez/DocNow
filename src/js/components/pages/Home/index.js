@@ -3,6 +3,12 @@ import React from "react";
 //Components
 import Button from "../../partials/Button";
 import Partners from "../../partials/Partners";
+import Icon from "../../partials/Icon";
+
+//SVG 
+import FindIcon from "../../../../img/MagGlass";
+import ClipboardIcon from "../../../../img/Clipboard";
+import DoctorIcon from "../../../../img/Doctor";
 
 const Home = () => (
 	<div>
@@ -52,6 +58,26 @@ const Home = () => (
 			<section className="partners-container">
 				<p>Trusted by our partners</p>
 				<Partners/>
+			</section>
+			<section className="process-container">
+				<h2>What To Expect</h2>
+				<div className="steps-icons">
+					<div className="icon-container find-icon">
+						<Icon iconId={FindIcon} />
+						<p>Find A Doctor</p>
+						<Button message="Start Searching" linkTo="#" buttonClass="btn-success"/> 
+					</div>
+					<div className="icon-container medical-file-icon">
+						<Icon iconId={ClipboardIcon} />
+						<p>Complete Your Medical File</p>
+						<Button message="Complete Your File" linkTo="#" buttonClass="btn-success"/> 
+					</div>
+					<div className="icon-container doctor-icon">
+						<Icon iconId={DoctorIcon} />
+						<p>Get Consulted By An Expert</p>
+						<Button message="Talk to an expert" linkTo="#" buttonClass="btn-success"/> 
+					</div>
+				</div>
 			</section>
 		</main>
 	</div>
