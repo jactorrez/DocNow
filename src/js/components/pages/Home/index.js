@@ -92,7 +92,13 @@ const Home = () => (
 									<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
 									<p className="user-name">Jane Holland</p>
-									<div className="user-stars"></div>
+									<div className="user-stars">
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+										<i className="fa fa-star star star-unfill" aria-hidden="true"></i>
+									</div>
 								</div>
 							</li>
 							<li className="review-slide">
@@ -101,7 +107,13 @@ const Home = () => (
 									<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
 									<p className="user-name">Harold Perkins</p>
-									<div className="user-stars"></div>
+									<div className="user-stars">
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+										<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+									</div>
 								</div>
 							</li>
 							<li className="review-slide">
@@ -110,7 +122,9 @@ const Home = () => (
 									<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
 									<p className="user-name">Jane Holland</p>
-									<div className="user-stars"></div>
+									<div className="user-stars">
+									
+									</div>
 								</div>
 							</li>
 							<li className="review-slide">
