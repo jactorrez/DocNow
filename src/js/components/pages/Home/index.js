@@ -55,11 +55,12 @@ const Home = () => (
 					</div>
 				</div>
 			</header>	
-			<section className="partners-container">
+			<section className="partners-section">
 				<p>Trusted by our partners</p>
 				<Partners/>
 			</section>
-			<section className="process-container">
+
+			<section className="icons-section">
 				<h2>What To Expect</h2>
 				<div className="steps-icons">
 					<div className="icon-container find-icon">
@@ -78,6 +79,58 @@ const Home = () => (
 						<Button message="Talk to an expert" linkTo="#" buttonClass="btn-success"/> 
 					</div>
 				</div>
+			</section>
+
+			<section className="reviews-section">
+				<h2>See What Our Users Think</h2>
+				<div className="review-slideshow">
+					<div className="slide-container">
+						<ul className="slide-list">
+							<li className="review-slide">
+								<img className="user-img"src="https://randomuser.me/api/portraits/women/16.jpg"/>
+								<div className="user-info">
+									<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+									<p className="user-name">Jane Holland</p>
+									<div className="user-stars"></div>
+								</div>
+							</li>
+							<li className="review-slide">
+								<img className="user-img"src="https://randomuser.me/api/portraits/men/12.jpg"/>
+								<div className="user-info">
+									<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+									<p className="user-name">Harold Perkins</p>
+									<div className="user-stars"></div>
+								</div>
+							</li>
+							<li className="review-slide">
+								<img className="user-img"src="https://randomuser.me/api/portraits/women/11.jpg"/>
+								<div className="user-info">
+									<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+									<p className="user-name">Jane Holland</p>
+									<div className="user-stars"></div>
+								</div>
+							</li>
+							<li className="review-slide">
+								<img className="user-img"src="https://randomuser.me/api/portraits/women/11.jpg"/>
+								<div className="user-info">
+									<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+									<p className="user-name">Harold Perkins</p>
+									<div className="user-stars"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div className="button-container">
+					<p>Are you a current user?</p>
+					<a className="btn btn-success">Leaving Feedback</a>
+				</div>
+				<i className="fa fa-chevron-left arrow arrow-left"></i>
+				<i className="fa fa-chevron-right arrow arrow-right"></i>
 			</section>
 		</main>
 	</div>
