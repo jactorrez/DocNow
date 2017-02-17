@@ -21,7 +21,6 @@ class Home extends React.Component {
 	}
 
 	slide(direction){
-
 		let slideshow = document.querySelector(".slide-list");
 		let slideContainer = slideshow.parentNode.getBoundingClientRect();
 		let slideByVal = slideContainer.width;
@@ -33,6 +32,11 @@ class Home extends React.Component {
 			if(this.slideAmount > (slideshow.children.length/2)){
 				this.slideAmount = slideshow.children.length/2;
 				console.log("next" + this.slideAmount);
+				slideshow.classList.toggle("toggleLimit");
+				
+				setTimeout(() => {
+					slideshow.classList.remove("toggleLimit");
+				}, 500);
 				return;
 			} else {
 				this.slideBy -= slideByVal;
@@ -45,7 +49,12 @@ class Home extends React.Component {
 
 			if(this.slideAmount < 1){
 				this.slideAmount = 1;
-				console.log("prev" + this.slideAmount);
+				console.log("called");
+				slideshow.classList.toggle("toggleLimit");
+
+				setTimeout(() => {
+					slideshow.classList.remove("toggleLimit");
+				}, 500);
 				return;
 			} else {
 				this.slideBy += slideByVal;
