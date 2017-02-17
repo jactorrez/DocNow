@@ -267,6 +267,7 @@
 					padding: 0;
 					width: 250%;
 					padding-top: 4rem;
+					transition: all 1s ease-out;
 
 					.review-slide{
 						display: inline-block;
@@ -314,6 +315,10 @@
 								color: $color-dark-grey;
 							}
 						}
+					}
+
+					.review-slide:nth-of-type(2n){
+						margin-right: 1.3rem;
 					}
 				}
 			}

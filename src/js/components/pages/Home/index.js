@@ -13,6 +13,51 @@ import StarIcon from "../../../../img/Star";
 
 class Home extends React.Component {
 
+	constructor(){
+		super();
+		this.nextSlide = this.nextSlide.bind(this);
+		this.prevSlide = this.prevSlide.bind(this);
+		this.slideAmount = 1;
+		this.slideBy = 0;
+	}
+
+	nextSlide(){
+		
+		let slideshow = document.querySelector(".slide-list");
+		let slideContainer = slideshow.parentNode.getBoundingClientRect();
+		let slideByVal = slideContainer.width;
+
+		this.slideAmount++;
+
+		if(this.slideAmount > (slideshow.children.length/2)){
+			this.slideAmount = slideshow.children.length/2;
+			console.log("greater than!")
+			return "nada";
+		} else {
+			this.slideBy -= slideByVal;
+			slideshow.style.marginLeft = this.slideBy + "px";
+		}
+	}
+
+	prevSlide(){
+
+		let slideshow = document.querySelector(".slide-list");
+		let slideContainer = slideshow.parentNode.getBoundingClientRect();
+		let slideByVal = slideContainer.width;
+
+		this.slideAmount--;
+
+		if(this.slideAmount < 1){
+			this.slideAmount = 1;
+			console.log("less than!");
+			return "nada";
+		} else {
+
+			this.slideBy += slideByVal;
+			slideshow.style.marginLeft = this.slideBy + "px";
+		}
+	}
+
 	render(){
 		return (<div>
 			<main>
@@ -44,7 +89,7 @@ class Home extends React.Component {
 									<div className="form-group">
 										<label>Specialty</label>
 										<select className="input-select input-long">
-											<option selected disabled>I am searching for a...</option>
+											<option defaultValue disabled>I am searching for a...</option>
 											<option>One</option>
 										</select>
 									</div>
@@ -139,7 +184,11 @@ class Home extends React.Component {
 										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
 										<p className="user-name">Jane Holland</p>
 										<div className="user-stars">
-										
+											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+											<i className="fa fa-star star star-unfill" aria-hidden="true"></i>
 										</div>
 									</div>
 								</li>
@@ -149,7 +198,13 @@ class Home extends React.Component {
 										<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
 										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
 										<p className="user-name">Harold Perkins</p>
-										<div className="user-stars"></div>
+										<div className="user-stars">
+											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
+											<i className="fa fa-star star star-unfill" aria-hidden="true"></i>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -159,13 +214,12 @@ class Home extends React.Component {
 						<p>Are you a current user?</p>
 						<a className="btn btn-success">Leaving Feedback</a>
 					</div>
-					<i className="fa fa-chevron-left arrow arrow-left"></i>
-					<i className="fa fa-chevron-right arrow arrow-right"></i>
+					<i onClick={this.prevSlide} className="fa fa-chevron-left arrow arrow-left"></i>
+					<i onClick={this.nextSlide} className="fa fa-chevron-right arrow arrow-right"></i>
 				</section>
 			</main>
 		</div>
 	);
-
 	}
 }
 
