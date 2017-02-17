@@ -15,46 +15,42 @@ class Home extends React.Component {
 
 	constructor(){
 		super();
-		this.nextSlide = this.nextSlide.bind(this);
-		this.prevSlide = this.prevSlide.bind(this);
+		this.slide = this.slide.bind(this);
 		this.slideAmount = 1;
 		this.slideBy = 0;
 	}
 
-	nextSlide(){
-		
-		let slideshow = document.querySelector(".slide-list");
-		let slideContainer = slideshow.parentNode.getBoundingClientRect();
-		let slideByVal = slideContainer.width;
-
-		this.slideAmount++;
-
-		if(this.slideAmount > (slideshow.children.length/2)){
-			this.slideAmount = slideshow.children.length/2;
-			console.log("greater than!")
-			return "nada";
-		} else {
-			this.slideBy -= slideByVal;
-			slideshow.style.marginLeft = this.slideBy + "px";
-		}
-	}
-
-	prevSlide(){
+	slide(direction){
 
 		let slideshow = document.querySelector(".slide-list");
 		let slideContainer = slideshow.parentNode.getBoundingClientRect();
 		let slideByVal = slideContainer.width;
 
-		this.slideAmount--;
+		if(direction === "next"){
 
-		if(this.slideAmount < 1){
-			this.slideAmount = 1;
-			console.log("less than!");
-			return "nada";
-		} else {
+			this.slideAmount++;
 
-			this.slideBy += slideByVal;
-			slideshow.style.marginLeft = this.slideBy + "px";
+			if(this.slideAmount > (slideshow.children.length/2)){
+				this.slideAmount = slideshow.children.length/2;
+				console.log("next" + this.slideAmount);
+				return;
+			} else {
+				this.slideBy -= slideByVal;
+				slideshow.style.marginLeft = this.slideBy + "px";
+			}
+
+		} else if(direction === "prev"){
+
+			this.slideAmount--;
+
+			if(this.slideAmount < 1){
+				this.slideAmount = 1;
+				console.log("prev" + this.slideAmount);
+				return;
+			} else {
+				this.slideBy += slideByVal;
+				slideshow.style.marginLeft = this.slideBy + "px";
+			}
 		}
 	}
 
@@ -214,8 +210,8 @@ class Home extends React.Component {
 						<p>Are you a current user?</p>
 						<a className="btn btn-success">Leaving Feedback</a>
 					</div>
-					<i onClick={this.prevSlide} className="fa fa-chevron-left arrow arrow-left"></i>
-					<i onClick={this.nextSlide} className="fa fa-chevron-right arrow arrow-right"></i>
+					<i onClick={() => this.slide("prev")} className="fa fa-chevron-left arrow arrow-left"></i>
+					<i onClick={() => this.slide("next")} className="fa fa-chevron-right arrow arrow-right"></i>
 				</section>
 			</main>
 		</div>
