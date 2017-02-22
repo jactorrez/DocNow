@@ -5,9 +5,10 @@
 
 .hero{
 	position: relative;
-	background-image: url('../img/home-cover2');
-	background-repeat: no-repeat;
-	background-size: cover;
+	//background-image: url('../img/home-cover2');
+	
+	border: 1px solid transparent;	
+
 	height: 100%;
 	overflow: hidden;
 
@@ -38,16 +39,24 @@
 		}
 }
 
-	/* ----- Hero Section Slideshow ----- */
+/* ----- Hero Section Slideshow ----- */
 
-	.slideshow{
-		position: relative;
-		padding: 0;
-		margin: 0;
-		top: 45%;
-		transform: translateY(-50%);
+.hero .slideshow{
+	margin: 0;
+	height: 100%;
+	padding: 0;
+	overflow: none;
+	position: relative;
 
-		.slide{
+	.slide{
+		position: absolute;
+		top:0;
+		left: 0;
+		height: 100%;
+		padding-top: 5rem;
+		transition: all 0.5s ease-out;
+
+		.slide-content{
 			border: 1px solid transparent;
 			width: 50%;
 			margin-left: 10rem;
@@ -65,527 +74,546 @@
 			}
 		}
 
-		
+		// &:not([data-slide="1"]){
+		// 	display: none;
+		// }
 	}
 
-	/* ------ Hero Section Search Bar  ----- */
-
-	.search-container{
-		border-radius: 5px;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
-		height: 200px;
-		width: 80%;
-		background: linear-gradient(to top right, white, rgba(255,255,255, 0.8));
-		margin-top: -50px;
-		padding: 1rem;
-	} 
-
-	.search-content{
-		text-align: center;
-			h4{
-				color: $color-dark-blue;
-				font-weight: 700;
-				font-family: "Open Sans", sans-serif;
-			}
+	[data-slide="1"]{
+		background-image: url('../img/home-cover2');
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
-	.search-form{
-
-		.btn-submit{
-			padding: 0.7rem 1.2rem; 
-		}
-
-		.input-long{
-			width: 270px;
-		}
+	[data-slide="2"]{
+		opacity: 0;
+		background-color: grey;
 	}
 
-	.form-group{
-		display: inline-block;
-		text-align: left;
-		margin-right: 1rem;
-	
-		label{
-			color: $color-blue;
-			font-family: "Open Sans", sans-serif;
-			display: block;
+	[data-slide="3"]{
+		opacity: 0;
+		background-color: red;
+	}
+}
+
+/* ------ Hero Section Search Bar  ----- */
+
+.search-container{
+	border-radius: 5px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 200px;
+	width: 80%;
+	background: linear-gradient(to top right, white, rgba(255,255,255, 0.8));
+	margin-top: -50px;
+	padding: 1rem;
+} 
+
+.search-content{
+	text-align: center;
+		h4{
+			color: $color-dark-blue;
 			font-weight: 700;
-			font-size: 0.9rem;
-			margin-bottom: 0.5rem;
-		}
-
-		input, .input-select{
-			padding: 0.5rem;
-			border: 1px solid rgba(black, 0.2);
-			font-size: 0.9rem;
 			font-family: "Open Sans", sans-serif;
 		}
+}
 
-		.input-select{
-			padding: 0.4rem;
-		}
+.search-form{
+
+	.btn-submit{
+		padding: 0.7rem 1.2rem; 
 	}
 
-	/* ------ Partners Section ----- */
-
-	.partners-section{
-		margin-top: 12rem;
-		text-align: center;
-
-		p{
-			font-family: "Open Sans", sans-serif;
-			color: $color-grey;
-			font-weight: 700;
-			display: inline-block;
-			margin-right: 3rem;
-			vertical-align: middle;
-			font-size: 1rem;
-		}
-
-		&>div{
-			display: inline-block;
-			vertical-align: middle;
-		}
+	.input-long{
+		width: 270px;
 	}
+}
 
-	.partner-icon{
-		display: inline-block;
-		margin-right: 2.5rem;
-		vertical-align: top;
-		height: 50px;
-		width: 120px;
-	}
+.form-group{
+	display: inline-block;
+	text-align: left;
+	margin-right: 1rem;
 
-	.partner-icon:nth-of-type(2){
-		width: 150px;
-	}
-
-	/* ------ Icons Section ----- */
-
-	.icons-section{
-		position: relative;
-		text-align: center;
-		margin-top: 8rem;
-		margin-bottom: 8rem;
+	label{
+		color: $color-blue;
 		font-family: "Open Sans", sans-serif;
-
-		.steps-icons{
-			counter-reset: icon_count;
-
-			.process-icon{
-				position: relative;
-			}
-
-			.process-icon::after{
-				position: absolute;
-				top:50%;
-				left:4rem;
-				font-family: "Open Sans", sans-serif;
-				counter-increment: icon_count;
-				content: counter(icon_count);
-				font-weight: 700;
-				font-size: 3.5rem;
-				color: $color-dark-blue;
-				transform: translateY(-50%);
-			}
-		}
-
-		h2{
-			color: $color-dark-blue;
-		}
-
-		.icon-container{
-			padding-top: 3rem;
-			display: inline-block;
-			counter-reset: icon-count;
-			margin-right: 2rem;
-
-			p{
-				display: block;
-				margin: 1.5rem 0 1.5rem;
-				font-weight: 700;
-			}
-		}
-
-		[data-star="1"]{
-			position: absolute;
-			top: 10px;
-			right: 0;
-			height: 70px;
-		}
-
-		[data-star="2"]{
-			position: absolute;
-			top: 0;
-			right: 80px;
-			height: 30px;
-		}
-
-		[data-star="3"]{
-			position: absolute;
-			top: 10rem;
-			right: 1.5rem;
-			height: 20px;
-		}
-
-		[data-star="4"]{
-			position: absolute;
-			top: 15rem;
-			right: 4rem;
-			height: 40px;
-		}
-
-
-
+		display: block;
+		font-weight: 700;
+		font-size: 0.9rem;
+		margin-bottom: 0.5rem;
 	}
 
-	/* ------ Reviews Section ----- */
+	input, .input-select{
+		padding: 0.5rem;
+		border: 1px solid rgba(black, 0.2);
+		font-size: 0.9rem;
+		font-family: "Open Sans", sans-serif;
+	}
 
-	.reviews-section{
-		position: relative;
-		padding: 3rem 0 4rem 0; 
-		background-color: $color-light-grey;
+	.input-select{
+		padding: 0.4rem;
+	}
+}
 
-		h2{
-			text-align: center;
+/* ------ Partners Section ----- */
+
+.partners-section{
+	margin-top: 12rem;
+	text-align: center;
+
+	p{
+		font-family: "Open Sans", sans-serif;
+		color: $color-grey;
+		font-weight: 700;
+		display: inline-block;
+		margin-right: 3rem;
+		vertical-align: middle;
+		font-size: 1rem;
+	}
+
+	&>div{
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.partner-icon{
+	display: inline-block;
+	margin-right: 2.5rem;
+	vertical-align: top;
+	height: 50px;
+	width: 120px;
+}
+
+.partner-icon:nth-of-type(2){
+	width: 150px;
+}
+
+/* ------ Icons Section ----- */
+
+.icons-section{
+	position: relative;
+	text-align: center;
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+	font-family: "Open Sans", sans-serif;
+
+	.steps-icons{
+		counter-reset: icon_count;
+
+		.process-icon{
+			position: relative;
+		}
+
+		.process-icon::after{
+			position: absolute;
+			top:50%;
+			left:4rem;
 			font-family: "Open Sans", sans-serif;
+			counter-increment: icon_count;
+			content: counter(icon_count);
+			font-weight: 700;
+			font-size: 3.5rem;
 			color: $color-dark-blue;
-		}
-
-		.review-slideshow{
-			max-width: 100%;
-			padding: 0 10rem;
-
-			div.slide-container{
-				max-width: 100%;
-				padding: 0;
-				overflow: hidden;
-
-				ul.slide-list{
-					padding: 0;
-					width: 250%;
-					padding-top: 4rem;
-					transition: all 0.6s ease-out;
-
-					.review-slide{
-						display: inline-block;
-						width: 450px;
-						height: 100%;
-						margin-right: 7rem;
-						list-style-type: none;
-						text-align: center;
-
-						.user-img{
-							border-radius: 50%;
-							height: 60px;
-						}
-
-						.user-info{
-						margin-top: 1.5rem;
-
-							.user-review{
-								margin: 0;
-								font-weight: 200;
-								font-size: 1rem;
-								font-style: italic;
-								line-height: 1.4rem;
-							}
-
-							.user-name{
-								margin: 0;
-								margin-top: 1.5rem;
-								font-weight: bold;
-							}	
-
-							.user-stars{
-								margin-top: 1rem;
-							}
-
-							.star{
-								margin-right: 0.4rem;
-							}
-	
-							.star-fill{
-								color: $color-yellow;
-							}
-
-							.star-unfill{
-								color: $color-dark-grey;
-							}
-						}
-					}
-
-					.review-slide:nth-of-type(2n){
-						margin-right: 1.3rem;
-					}
-				}
-			}
-		}
-
-		.button-container{
-			text-align: center;
-			margin-top: 5rem;
-
-			p{
-				margin: 0;
-				margin-bottom: 1.4rem;
-				display: block;
-				font-weight: bold;
-
-			}
-		}
-
-		.arrow-left{
-			position: absolute;
-			top:50%;
 			transform: translateY(-50%);
-			left: 4rem;
-			transition: transform 0.2s ease-out;
-			cursor: pointer;
-
-			&:hover{
-				transform: translate(-5px, -50%);
-			}
-		}
-
-		.arrow-right{
-			position: absolute;
-			top:50%;
-			transform: translateY(-50%);
-			right: 4rem;
-			transition: transform 0.2s ease-out;
-			cursor: pointer;
-
-			&:hover{
-				transform: translate(5px, -50%);
-			}
 		}
 	}
 
-	/* ------ Download App Section ------ */
+	h2{
+		color: $color-dark-blue;
+	}
 
-	.download-app-section{
-		padding-top: 8rem;
-		position: relative;
+	.icon-container{
+		padding-top: 3rem;
+		display: inline-block;
+		counter-reset: icon-count;
+		margin-right: 2rem;
 
-		[data-star="5"]{
-			position: absolute;
-			top: 150px;
-			left: 70px;
-			height: 80px;
-		}
-
-		[data-star="6"]{
-			position: absolute;
-			top: 90px;
-			left: 0;
-			height: 40px;
-		}
-
-		[data-star="7"]{
-			position: absolute;
-			top: 160px;
-			left: 0;
-			height: 20px;
-		}
-
-		[data-star="8"]{
-			position: absolute;
-			top: 50px;
-			left: -90px;
-			height: 50px;
-		}
-
-		[data-star="9"]{
-			position: absolute;
-			top: 60px;
-			left: 60px;
-			height: 20px;
-		}
-
-		[data-star="10"]{
-			position: absolute;
-			top: 85px;
-			left: 100px;
-			height: 40px;
-		}
-
-		.phone-illustration{
-			vertical-align: top;
-			display: inline-block;
-			height: auto;
-			width: 50%;
-			padding: 0 0 0 15rem;
-			box-sizing: border-box;
-
-			.phone-portrait{
-				position: relative;	
-				height: 350px;
-				z-index: 1000;
-			}
-		}
-
-		.download-stores{
-			display: inline-block;
-			width: 50%;
-			padding: 4rem 0 0 0;
-
-			h2{
-				margin: 0;
-				margin-bottom: 1.6rem;
-				color: $color-dark-blue;
-			}
-
-			p{
-				margin: 0;
-				margin-bottom: 2rem;
-				line-height: 1.3rem;
-				width: 85%;
-			}
-
-			.store-buttons{
-
-				a:first-child{
-					margin-right: 2.5rem;
-				}
-
-				a i{
-					margin-right: 0.4rem;
-				}
-			}
+		p{
+			display: block;
+			margin: 1.5rem 0 1.5rem;
+			font-weight: 700;
 		}
 	}
 
-	/* ----- If Doctor CTA ------ */
+	[data-star="1"]{
+		position: absolute;
+		top: 10px;
+		right: 0;
+		height: 70px;
+	}
 
-	.doctors-CTA{
-		background-color: $color-green;
-		position: relative;
+	[data-star="2"]{
+		position: absolute;
+		top: 0;
+		right: 80px;
+		height: 30px;
+	}
+
+	[data-star="3"]{
+		position: absolute;
+		top: 10rem;
+		right: 1.5rem;
+		height: 20px;
+	}
+
+	[data-star="4"]{
+		position: absolute;
+		top: 15rem;
+		right: 4rem;
+		height: 40px;
+	}
+
+
+
+}
+
+/* ------ Reviews Section ----- */
+
+.reviews-section{
+	position: relative;
+	padding: 3rem 0 4rem 0; 
+	background-color: $color-light-grey;
+
+	h2{
 		text-align: center;
-		padding: 1.7rem 0;
-		overflow: hidden;
-		margin-top: -4px;
+		font-family: "Open Sans", sans-serif;
+		color: $color-dark-blue;
+	}
 
-		svg{
-			position: absolute;
-			width: 20px;
-			opacity: 0.3;
+	.review-slideshow{
+		max-width: 100%;
+		padding: 0 10rem;
+
+		div.slide-container{
+			max-width: 100%;
+			padding: 0;
+			overflow: hidden;
+
+			ul.slide-list{
+				padding: 0;
+				width: 340%;
+				padding-top: 4rem;
+				transition: all 0.6s ease-out;
+
+				.review-slide{
+					display: inline-block;
+					width: 450px;
+					height: 100%;
+					margin-right: 7rem;
+					list-style-type: none;
+					text-align: center;
+
+					.user-img{
+						border-radius: 50%;
+						height: 60px;
+					}
+
+					.user-info{
+					margin-top: 1.5rem;
+
+						.user-review{
+							margin: 0;
+							font-weight: 200;
+							font-size: 1rem;
+							font-style: italic;
+							line-height: 1.4rem;
+						}
+
+						.user-name{
+							margin: 0;
+							margin-top: 1.5rem;
+							font-weight: bold;
+						}	
+
+						.user-stars{
+							margin-top: 1rem;
+						}
+
+						.star{
+							margin-right: 0.4rem;
+						}
+
+						.star-fill{
+							color: $color-yellow;
+						}
+
+						.star-unfill{
+							color: $color-dark-grey;
+						}
+					}
+				}
+
+				.review-slide:nth-of-type(2n){
+					margin-right: 1.3rem;
+				}
+			}
 		}
+	}
 
-		[data-star="11"]{
-			top: -20px;
-			right: 100px;
+	.button-container{
+		text-align: center;
+		margin-top: 5rem;
+
+		p{
+			margin: 0;
+			margin-bottom: 1.4rem;
+			display: block;
+			font-weight: bold;
+
 		}
+	}
 
-		[data-star="12"]{
-			width: 40px;
-			top: -60px;
-			right: 150px;
+	.arrow-left{
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		left: 4rem;
+		transition: transform 0.2s ease-out;
+		cursor: pointer;
+
+		&:hover{
+			transform: translate(-5px, -50%);
 		}
+	}
 
-		[data-star="13"]{
-			width: 30px;
-			top: -50px;
-			right: 240px;
+	.arrow-right{
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		right: 4rem;
+		transition: transform 0.2s ease-out;
+		cursor: pointer;
+
+		&:hover{
+			transform: translate(5px, -50%);
 		}
+	}
+}
 
-		[data-star="14"]{
-			width: 15px;
-			top: -20px;
-			right: 210px;
+/* ------ Download App Section ------ */
+
+.download-app-section{
+	padding-top: 8rem;
+	position: relative;
+
+	[data-star="5"]{
+		position: absolute;
+		top: 150px;
+		left: 70px;
+		height: 80px;
+	}
+
+	[data-star="6"]{
+		position: absolute;
+		top: 90px;
+		left: 0;
+		height: 40px;
+	}
+
+	[data-star="7"]{
+		position: absolute;
+		top: 160px;
+		left: 0;
+		height: 20px;
+	}
+
+	[data-star="8"]{
+		position: absolute;
+		top: 50px;
+		left: -90px;
+		height: 50px;
+	}
+
+	[data-star="9"]{
+		position: absolute;
+		top: 60px;
+		left: 60px;
+		height: 20px;
+	}
+
+	[data-star="10"]{
+		position: absolute;
+		top: 85px;
+		left: 100px;
+		height: 40px;
+	}
+
+	.phone-illustration{
+		vertical-align: top;
+		display: inline-block;
+		height: auto;
+		width: 50%;
+		padding: 0 0 0 15rem;
+		box-sizing: border-box;
+
+		.phone-portrait{
+			position: relative;	
+			height: 350px;
+			z-index: 1000;
 		}
+	}
 
-		[data-star="15"]{
-			width: 25px;
-			top: -40px;
-			right: 30px;
+	.download-stores{
+		display: inline-block;
+		width: 50%;
+		padding: 4rem 0 0 0;
+
+		h2{
+			margin: 0;
+			margin-bottom: 1.6rem;
+			color: $color-dark-blue;
 		}
 
 		p{
-			color: white;
 			margin: 0;
-			margin-right: 2rem;
+			margin-bottom: 2rem;
+			line-height: 1.3rem;
+			width: 85%;
 		}
 
-		a.btn{
-			color: white;
-		}
-	}
+		.store-buttons{
 
-	footer{
-
-		.main-content{
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			padding: 4rem 0;
-
-			.footer-logo{
-				position: relative;
-				display: inline-block;
-				width: 30%;
-				text-align: center;
-				font-family: "Open Sans", sans-serif;
-				color: $color-dark-blue;
-				font-weight: bold;
-				font-size: 0.9rem;
-				margin-right: 4rem;
+			a:first-child{
+				margin-right: 2.5rem;
 			}
 
-			.footer-content{
+			a i{
+				margin-right: 0.4rem;
+			}
+		}
+	}
+}
+
+/* ----- If Doctor CTA ------ */
+
+.doctors-CTA{
+	background-color: $color-green;
+	position: relative;
+	text-align: center;
+	padding: 1.7rem 0;
+	overflow: hidden;
+	margin-top: -4px;
+
+	svg{
+		position: absolute;
+		width: 20px;
+		opacity: 0.3;
+	}
+
+	[data-star="11"]{
+		top: -20px;
+		right: 100px;
+	}
+
+	[data-star="12"]{
+		width: 40px;
+		top: -60px;
+		right: 150px;
+	}
+
+	[data-star="13"]{
+		width: 30px;
+		top: -50px;
+		right: 240px;
+	}
+
+	[data-star="14"]{
+		width: 15px;
+		top: -20px;
+		right: 210px;
+	}
+
+	[data-star="15"]{
+		width: 25px;
+		top: -40px;
+		right: 30px;
+	}
+
+	p{
+		color: white;
+		margin: 0;
+		margin-right: 2rem;
+	}
+
+	a.btn{
+		color: white;
+	}
+}
+
+footer{
+
+	.main-content{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 4rem 0;
+
+		.footer-logo{
+			position: relative;
+			display: inline-block;
+			width: 30%;
+			text-align: center;
+			font-family: "Open Sans", sans-serif;
+			color: $color-dark-blue;
+			font-weight: bold;
+			font-size: 0.9rem;
+			margin-right: 4rem;
+		}
+
+		.footer-content{
+			display: inline-block;
+
+			li{
+				margin-right: 1.5rem;
+			}
+
+			& > ul > li{
+
+				font-family: inherit;
+
+				p{
+					color: $color-dark-blue;
+					font-family: "Open Sans", sans-serif;
+					font-size: 0.9rem;
+					font-weight: 600;
+					margin: 0 0 1rem 0;
+				}
+
 				display: inline-block;
+				vertical-align: top;
+			}
+
+			& ul{
+				list-style-type: none;
+				padding: 0;
 
 				li{
-					margin-right: 1.5rem;
+					color: grey;
+					font-family: "Open Sans", sans-serif;
+					font-size: 0.85rem;
+					font-weight: 600;
+					margin-bottom: 0.7rem;
 				}
-
-				& > ul > li{
-
-					font-family: inherit;
-
-					p{
-						color: $color-dark-blue;
-						font-family: "Open Sans", sans-serif;
-						font-size: 0.9rem;
-						font-weight: 600;
-						margin: 0 0 1rem 0;
-					}
-
-					display: inline-block;
-					vertical-align: top;
-				}
-
-				& ul{
-					list-style-type: none;
-					padding: 0;
-
-					li{
-						color: grey;
-						font-family: "Open Sans", sans-serif;
-						font-size: 0.85rem;
-						font-weight: 600;
-						margin-bottom: 0.7rem;
-					}
-				}
-
 			}
-		}
 
-		.copyright{
-			border-top: 1px solid $color-dark-grey;
-			padding: 1rem 0;
-			text-align: center;
-			margin: 0 4rem;
-			font-family: "Open Sans", sans-serif;
-			font-weight: 600;
-			font-size: 0.85rem;
-
-			a{
-				font-family: inherit;
-				font-weight: inherit;
-				font-size: inherit;
-			}
 		}
 	}
+
+	.copyright{
+		border-top: 1px solid $color-dark-grey;
+		padding: 1rem 0;
+		text-align: center;
+		margin: 0 4rem;
+		font-family: "Open Sans", sans-serif;
+		font-weight: 600;
+		font-size: 0.85rem;
+
+		a{
+			font-family: inherit;
+			font-weight: inherit;
+			font-size: inherit;
+		}
+	}
+}

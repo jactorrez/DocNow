@@ -4,6 +4,9 @@ import React from "react";
 import Button from "../../partials/Button";
 import Partners from "../../partials/Partners";
 import Icon from "../../partials/Icon";
+import HeroSection from "./Hero-Section";
+import ReviewSlideShow from "./Review-Slideshow";
+import Footer from "./Footer";
 
 //SVG 
 import FindIcon from "../../../../img/MagGlass";
@@ -14,100 +17,10 @@ import PhonePortrait from "../../../../img/Phone-Portrait";
 
 class Home extends React.Component {
 
-	constructor(){
-		super();
-		this.slide = this.slide.bind(this);
-		this.slideAmount = 1;
-		this.slideBy = 0;
-	}
-
-	slide(direction){
-		let slideshow = document.querySelector(".slide-list");
-		let slideContainer = slideshow.parentNode.getBoundingClientRect();
-		let slideByVal = slideContainer.width;
-
-		if(direction === "next"){
-
-			this.slideAmount++;
-
-			if(this.slideAmount > (slideshow.children.length/2)){
-				this.slideAmount = slideshow.children.length/2;
-				
-				slideshow.classList.toggle("toggleLimit");
-				
-				setTimeout(() => {
-					slideshow.classList.remove("toggleLimit");
-				}, 500);
-				return;
-			} else {
-				this.slideBy -= slideByVal;
-				slideshow.style.marginLeft = this.slideBy + "px";
-			}
-
-		} else if(direction === "prev"){
-
-			this.slideAmount--;
-
-			if(this.slideAmount < 1){
-				this.slideAmount = 1;
-				slideshow.classList.toggle("toggleLimit");
-
-				setTimeout(() => {
-					slideshow.classList.remove("toggleLimit");
-				}, 500);
-				return;
-			} else {
-				this.slideBy += slideByVal;
-				slideshow.style.marginLeft = this.slideBy + "px";
-			}
-		}
-	}
-
 	render(){
 		return (<div>
 			<main>
-				<header className="hero-container"> 
-					<section className="hero">	
-						<ul className="slideshow">
-							<div className="slide" data-slide="1">
-								<h1>The Best Doctors Near You, For You</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-								   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-								   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-								   esse cillum dolore eu fugiat nulla pariatur.
-								</p>
-								<Button message="Learn More" linkTo="#" buttonClass="btn-base"/>
-							</div>
-						</ul>	
-						<i className="fa fa-chevron-left arrow arrow-left"></i>
-						<i className="fa fa-chevron-right arrow arrow-right"></i>
-					</section>
-					<div className="search-container">
-						<div className="search-content">
-							<h4>Find A Doctor</h4>
-							<div className="search-form">
-								<form method="POST" action="/">
-									<div className="form-group">
-										<label>City</label>
-										<input type="text" placeholder="Your city" />
-									</div>
-									<div className="form-group">
-										<label>Specialty</label>
-										<select className="input-select input-long">
-											<option defaultValue disabled>I am searching for a...</option>
-											<option>One</option>
-										</select>
-									</div>
-									<div className="form-group">
-										<label>Insurance</label>
-										<input type="text" className="input-long" placeholder="Who will cover?"/>
-									</div>
-									<button className="btn btn-success btn-find">Find a Doctor</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</header>	
+				<HeroSection/>	
 
 				<section className="partners-section">
 					<p>Trusted by our partners</p>
@@ -147,81 +60,7 @@ class Home extends React.Component {
 					</svg>
 				</section>
 
-				<section className="reviews-section">
-					<h2>See What Our Users Think</h2>
-					<div className="review-slideshow">
-						<div className="slide-container">
-							<ul className="slide-list">
-								<li className="review-slide">
-									<img className="user-img" src="https://randomuser.me/api/portraits/women/16.jpg"/>
-									<div className="user-info">
-										<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-										<p className="user-name">Jane Holland</p>
-										<div className="user-stars">
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-unfill" aria-hidden="true"></i>
-										</div>
-									</div>
-								</li>
-								<li className="review-slide">
-									<img className="user-img"src="https://randomuser.me/api/portraits/men/12.jpg"/>
-									<div className="user-info">
-										<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-										<p className="user-name">Harold Perkins</p>
-										<div className="user-stars">
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-										</div>
-									</div>
-								</li>
-								<li className="review-slide">
-									<img className="user-img"src="https://randomuser.me/api/portraits/women/11.jpg"/>
-									<div className="user-info">
-										<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-										<p className="user-name">Jane Holland</p>
-										<div className="user-stars">
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-unfill" aria-hidden="true"></i>
-										</div>
-									</div>
-								</li>
-								<li className="review-slide">
-									<img className="user-img"src="https://randomuser.me/api/portraits/women/11.jpg"/>
-									<div className="user-info">
-										<p className="user-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-										<p className="user-name">Harold Perkins</p>
-										<div className="user-stars">
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-fill" aria-hidden="true"></i>
-											<i className="fa fa-star star star-unfill" aria-hidden="true"></i>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div className="button-container">
-						<p>Are you a current user?</p>
-						<a className="btn btn-success">Leaving Feedback</a>
-					</div>
-					<i onClick={() => this.slide("prev")} className="fa fa-chevron-left arrow arrow-left"></i>
-					<i onClick={() => this.slide("next")} className="fa fa-chevron-right arrow arrow-right"></i>
-				</section>
+				<ReviewSlideShow/>
 
 				<section className="download-app-section">
 					<div className="phone-illustration">
@@ -280,59 +119,7 @@ class Home extends React.Component {
 					<a href="#" className="btn btn-white-border">Get Certified Today</a>
 				</div>
 			</main>
-			<footer>
-				<div className="main-content">
-					<div className="footer-logo">
-						<h1>DocNow</h1>
-					</div>
-
-					<div className="footer-content">
-						<ul>
-							<li>
-								<p>About</p>
-								<ul>
-									<li>About Us</li>
-									<li>Press Center</li>	
-									<li>Contact</li>
-									<li>Blog</li>
-								</ul>
-							</li>
-							<li>
-								<p>Insurance</p>
-								<ul>
-									<li>Cigna</li>
-									<li>GHI</li>	
-									<li>HIP</li>
-									<li>Blue Cross Blue Shield</li>
-									<a href="#">More...</a>
-								</ul>
-							</li>
-							<li>
-								<p>Top Doctors</p>
-								<ul>
-									<li>Dr. Lal</li>
-									<li>Dr. Ahmed Soomro</li>	
-									<li>Dr. Shanaz</li>
-									<li>Dr. Abid</li>
-									<li>Dr. Rubina Ashraf</li>
-								</ul>
-							</li>
-							<li>
-								<p>Contact Us</p>
-								<ul>
-									<li>Call</li>
-									<li>Live Chat</li>	
-									<li>Twitter</li>
-									<li>Facebook</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div className="copyright">
-				 	<span> Our <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a> &copy; DocNow, Inc</span>
-				</div>
-			</footer>
+			<Footer/>
 		</div>
 	);
 	}
