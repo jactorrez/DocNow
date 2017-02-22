@@ -10,6 +10,8 @@ const HeroSection = (props) => {
 		totalSlides = document.querySelectorAll(".slide").length;
 	}, 1000);
 
+	setInterval(() => triggerSlide("next"), 10000);
+
 	function triggerSlide(direction){
 
 		if(direction === "next"){
@@ -86,13 +88,13 @@ const HeroSection = (props) => {
 						</div>
 						<div className="slide" data-slide="3">
 							<div className="slide-content">
-								<h1>DocNow Tools and Resources</h1>
-								<p>Locate a doctor, find a pharmacy, make health benefits choices and more. Duis aute irure dolor in reprehenderit in voluptate velit 
+								<h1>Looking for quality, affordable health care solutions?</h1>
+								<p>DocNow helps you find quality and affordable health services. Duis aute irure dolor in reprehenderit in voluptate velit 
 								   esse cillum dolore eu fugiat nulla pariatur.
 								   Duis aute irure dolor in reprehenderit in voluptate velit 
 								   esse cillum dolore eu fugiat nulla pariatur.
 								</p>
-								<Button message="Learn More" linkTo="#" buttonClass="btn-base"/>
+								<Button message="Get Free Consultation" linkTo="#" buttonClass="btn-base"/>
 							</div>
 						</div>
 					</ul>	

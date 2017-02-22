@@ -5,10 +5,7 @@
 
 .hero{
 	position: relative;
-	//background-image: url('../img/home-cover2');
-	
 	border: 1px solid transparent;	
-
 	height: 100%;
 	overflow: hidden;
 
@@ -54,7 +51,7 @@
 		left: 0;
 		height: 100%;
 		padding-top: 5rem;
-		transition: all 0.5s ease-out;
+		transition: all 0.9s ease-out;
 
 		.slide-content{
 			border: 1px solid transparent;
@@ -73,26 +70,26 @@
 				line-height: 1.5rem;
 			}
 		}
-
-		// &:not([data-slide="1"]){
-		// 	display: none;
-		// }
 	}
 
 	[data-slide="1"]{
-		background-image: url('../img/home-cover2');
+		background-image: url('../img/cover-1');
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	[data-slide="2"]{
 		opacity: 0;
-		background-color: grey;
+		background-image: url('../img/cover-2');
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	[data-slide="3"]{
 		opacity: 0;
-		background-color: red;
+		background-image: url('../img/cover-3');
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 
