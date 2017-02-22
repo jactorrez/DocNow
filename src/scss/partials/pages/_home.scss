@@ -267,7 +267,7 @@
 					padding: 0;
 					width: 250%;
 					padding-top: 4rem;
-					transition: all 1s ease-out;
+					transition: all 0.6s ease-out;
 
 					.review-slide{
 						display: inline-block;
@@ -360,6 +360,100 @@
 
 			&:hover{
 				transform: translate(5px, -50%);
+			}
+		}
+	}
+
+	/* ------ Download App Section ------ */
+
+	.download-app-section{
+		padding-top: 8rem;
+		position: relative;
+
+		[data-star="5"]{
+			position: absolute;
+			top: 150px;
+			left: 70px;
+			height: 80px;
+		}
+
+		[data-star="6"]{
+			position: absolute;
+			top: 90px;
+			left: 0;
+			height: 40px;
+		}
+
+		[data-star="7"]{
+			position: absolute;
+			top: 160px;
+			left: 0;
+			height: 20px;
+		}
+
+		[data-star="8"]{
+			position: absolute;
+			top: 50px;
+			left: -90px;
+			height: 50px;
+		}
+
+		[data-star="9"]{
+			position: absolute;
+			top: 60px;
+			left: 60px;
+			height: 20px;
+		}
+
+		[data-star="10"]{
+			position: absolute;
+			top: 85px;
+			left: 100px;
+			height: 40px;
+		}
+
+		.phone-illustration{
+			vertical-align: top;
+			display: inline-block;
+			height: auto;
+			width: 50%;
+			padding: 0 0 0 15rem;
+			box-sizing: border-box;
+
+			.phone-portrait{
+				position: relative;	
+				height: 350px;
+				z-index: 1000;
+			}
+		}
+
+		.download-stores{
+			display: inline-block;
+			width: 50%;
+			padding: 4rem 0 0 0;
+
+			h2{
+				margin: 0;
+				margin-bottom: 1.6rem;
+				color: $color-dark-blue;
+			}
+
+			p{
+				margin: 0;
+				margin-bottom: 2rem;
+				line-height: 1.3rem;
+				width: 85%;
+			}
+
+			.store-buttons{
+
+				a:first-child{
+					margin-right: 2.5rem;
+				}
+
+				a i{
+					margin-right: 0.4rem;
+				}
 			}
 		}
 	}

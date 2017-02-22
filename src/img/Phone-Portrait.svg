@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="603" viewBox="0 0 600 603" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="a" width="540" height="1098.468" rx="81"/>
+    <filter id="c" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox">
+      <feGaussianBlur stdDeviation="14" in="SourceAlpha" result="shadowBlurInner1"/>
+      <feOffset dy="-12" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.202587183 0" in="shadowInnerInner1" result="shadowMatrixInner1"/>
+      <feGaussianBlur stdDeviation="39" in="SourceAlpha" result="shadowBlurInner2"/>
+      <feOffset dy="12" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+      <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"/>
+      <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" in="shadowInnerInner2" result="shadowMatrixInner2"/>
+      <feMerge>
+        <feMergeNode in="shadowMatrixInner1"/>
+        <feMergeNode in="shadowMatrixInner2"/>
+      </feMerge>
+    </filter>
+    <mask id="d" width="540" height="1098.468" x="0" y="0" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <rect id="f" width="540" height="1098.468" y="1.979" rx="81"/>
+    <filter id="e" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox">
+      <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/>
+      <feOffset dy="12" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="13" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0.255660077 0 0 0 0 0.252598491 0 0 0 0 0.252598491 0 0 0 0.210965806 0" in="shadowBlurOuter1"/>
+    </filter>
+    <filter id="g" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox">
+      <feGaussianBlur stdDeviation="14" in="SourceAlpha" result="shadowBlurInner1"/>
+      <feOffset dy="-12" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.202587183 0" in="shadowInnerInner1" result="shadowMatrixInner1"/>
+      <feGaussianBlur stdDeviation="39" in="SourceAlpha" result="shadowBlurInner2"/>
+      <feOffset dy="12" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+      <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"/>
+      <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" in="shadowInnerInner2" result="shadowMatrixInner2"/>
+      <feMerge>
+        <feMergeNode in="shadowMatrixInner1"/>
+        <feMergeNode in="shadowMatrixInner2"/>
+      </feMerge>
+    </filter>
+    <rect id="b" width="480.6" height="838.538" x="28.8" y="131.944" rx="1.8"/>
+    <mask id="h" width="480.6" height="838.538" x="0" y="0" fill="white">
+      <use xlink:href="#b"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(30 16)">
+    <use fill="#FFFFFF" xlink:href="#a"/>
+    <use fill="black" filter="url(#c)" xlink:href="#a"/>
+    <use stroke="#F1F1F1" stroke-width="3.6" mask="url(#d)" xlink:href="#a"/>
+    <use fill="black" filter="url(#e)" xlink:href="#f"/>
+    <use fill="#FFFFFF" xlink:href="#f"/>
+    <use fill="black" filter="url(#g)" xlink:href="#f"/>
+    <use stroke="#EBEFF3" stroke-width="3.6" mask="url(#h)" xlink:href="#b"/>
+    <rect width="84.6" height="12.462" x="228.6" y="66.071" fill="#E2E8EE" opacity=".713" rx="6.231"/>
+    <g transform="translate(31 134)">
+      <rect width="477.928" height="532" x=".007" y="226" fill="#FFFFFF"/>
+      <rect width="478.525" height="226" x=".007" fill="#DFE8EB" rx="8"/>
+      <g fill="#FFFFFF" transform="translate(389 20)">
+        <rect width="50.855" height="8" rx="4"/>
+        <rect width="50.855" height="8" y="14" rx="4"/>
+        <rect width="50.855" height="8" y="28" rx="4"/>
+      </g>
+      <text fill="#FFFFFF" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="60" font-weight="bold">
+        <tspan x="117" y="137">DocNow</tspan>
+      </text>
+      <g transform="translate(101 256)">
+        <ellipse cx="49.62" cy="69.62" fill="#DFE8EB" rx="47.62" ry="47.62"/>
+        <rect width="100" height="12" fill="#D1D1D1"/>
+      </g>
+      <g transform="translate(101 412)">
+        <ellipse cx="49.62" cy="69.62" fill="#DFE8EB" rx="47.62" ry="47.62"/>
+        <rect width="100" height="12" fill="#D1D1D1"/>
+      </g>
+      <g transform="translate(289 256)">
+        <ellipse cx="49.62" cy="69.62" fill="#DFE8EB" rx="47.62" ry="47.62"/>
+        <rect width="100" height="12" fill="#D1D1D1"/>
+      </g>
+      <g transform="translate(289 412)">
+        <ellipse cx="49.62" cy="69.62" fill="#DFE8EB" rx="47.62" ry="47.62"/>
+        <rect width="100" height="12" fill="#D1D1D1"/>
+      </g>
+    </g>
+  </g>
+</svg>

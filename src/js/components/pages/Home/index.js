@@ -10,6 +10,7 @@ import FindIcon from "../../../../img/MagGlass";
 import ClipboardIcon from "../../../../img/Clipboard";
 import DoctorIcon from "../../../../img/Doctor";
 import StarIcon from "../../../../img/Star";
+import PhonePortrait from "../../../../img/Phone-Portrait";
 
 class Home extends React.Component {
 
@@ -31,7 +32,7 @@ class Home extends React.Component {
 
 			if(this.slideAmount > (slideshow.children.length/2)){
 				this.slideAmount = slideshow.children.length/2;
-				console.log("next" + this.slideAmount);
+				
 				slideshow.classList.toggle("toggleLimit");
 				
 				setTimeout(() => {
@@ -49,7 +50,6 @@ class Home extends React.Component {
 
 			if(this.slideAmount < 1){
 				this.slideAmount = 1;
-				console.log("called");
 				slideshow.classList.toggle("toggleLimit");
 
 				setTimeout(() => {
@@ -102,7 +102,7 @@ class Home extends React.Component {
 										<label>Insurance</label>
 										<input type="text" className="input-long" placeholder="Who will cover?"/>
 									</div>
-									<button className="btn btn-success btn-find"><span>Find a Doctor</span></button>
+									<button className="btn btn-success btn-find">Find a Doctor</button>
 								</form>
 							</div>
 						</div>
@@ -221,6 +221,41 @@ class Home extends React.Component {
 					</div>
 					<i onClick={() => this.slide("prev")} className="fa fa-chevron-left arrow arrow-left"></i>
 					<i onClick={() => this.slide("next")} className="fa fa-chevron-right arrow arrow-right"></i>
+				</section>
+
+				<section className="download-app-section">
+					<div className="phone-illustration">
+						<svg data-star="5">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="6">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="7">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="8">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="9">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="10">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg className="phone-portrait">
+							<use xlinkHref={PhonePortrait}></use>
+						</svg>		
+					</div>
+					<div className="download-stores">
+						<h2>Download the DocNow	app</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<div className="store-buttons">
+							<a href="#" className="btn ios-store-btn btn-success"><i className="fa fa-apple" aria-hidden="true"></i>Download for iOS</a>
+							<a href="#" className="btn android-store-btn btn-success"><i className="fa fa-android" aria-hidden="true"></i>Download for Android</a>
+						</div>
+					</div>
 				</section>
 			</main>
 		</div>
