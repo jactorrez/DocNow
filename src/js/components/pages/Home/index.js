@@ -257,6 +257,28 @@ class Home extends React.Component {
 						</div>
 					</div>
 				</section>
+				<div className="doctors-CTA">
+						<svg data-star="11">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="12">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="13">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="14">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="15">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+						<svg data-star="16">
+							<use xlinkHref={StarIcon}></use>
+						</svg>
+					<p>Are you a doctor or medical expert? Getting certified means reaching more patients</p>
+					<a href="#" className="btn btn-white-border">Get Certified Today</a>
+				</div>
 			</main>
 		</div>
 	);

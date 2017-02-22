@@ -457,3 +457,59 @@
 			}
 		}
 	}
+
+	/* ----- If Doctor CTA ------ */
+
+	.doctors-CTA{
+		background-color: $color-green;
+		position: relative;
+		text-align: center;
+		padding: 1.7rem 0;
+		overflow: hidden;
+		margin-top: -4px;
+
+		svg{
+			position: absolute;
+			width: 20px;
+			opacity: 0.3;
+		}
+
+		[data-star="11"]{
+			top: -20px;
+			right: 100px;
+		}
+
+		[data-star="12"]{
+			width: 40px;
+			top: -60px;
+			right: 150px;
+		}
+
+		[data-star="13"]{
+			width: 30px;
+			top: -50px;
+			right: 240px;
+		}
+
+		[data-star="14"]{
+			width: 15px;
+			top: -20px;
+			right: 210px;
+		}
+
+		[data-star="15"]{
+			width: 25px;
+			top: -40px;
+			right: 30px;
+		}
+
+		p{
+			color: white;
+			margin: 0;
+			margin-right: 2rem;
+		}
+
+		a.btn{
+			color: white;
+		}
+	}
