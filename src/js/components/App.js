@@ -10,6 +10,7 @@ var App = () => (
 		<Router history={hashHistory}>
 			<Route path="/" component={NavBar}>
 				<IndexRoute component={Home}/>
+				<Route path="contact-us" component={Contact}/>	
 			</Route>
 		</Router>
 	);

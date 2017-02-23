@@ -73,7 +73,7 @@ const HeroSection = (props) => {
 								   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
 								   esse cillum dolore eu fugiat nulla pariatur.
 								</p>
-								<Button message="Learn More" linkTo="#" buttonClass="btn-base"/>
+								<Button message="Learn More" linkTo="#" type="base">Learn More</Button>
 							</div>
 						</div>
 						<div className="slide" data-slide="2">
@@ -83,7 +83,7 @@ const HeroSection = (props) => {
 								   esse cillum dolore eu fugiat nulla pariatur.Duis aute irure dolor in reprehenderit in voluptate velit 
 								   esse cillum dolore eu fugiat nulla pariatur.
 								</p>
-								<Button message="Learn More" linkTo="#" buttonClass="btn-base"/>
+								<Button message="Learn More" linkTo="#" type="base">Learn More</Button>
 							</div>
 						</div>
 						<div className="slide" data-slide="3">
@@ -94,7 +94,7 @@ const HeroSection = (props) => {
 								   Duis aute irure dolor in reprehenderit in voluptate velit 
 								   esse cillum dolore eu fugiat nulla pariatur.
 								</p>
-								<Button message="Get Free Consultation" linkTo="#" buttonClass="btn-base"/>
+								<Button message="Learn More" linkTo="#" type="base">Learn More</Button>
 							</div>
 						</div>
 					</ul>	
@@ -121,7 +121,7 @@ const HeroSection = (props) => {
 									<label>Insurance</label>
 									<input type="text" className="input-long" placeholder="Who will cover?"/>
 								</div>
-								<button className="btn btn-success btn-find">Find a Doctor</button>
+								<Button type="success" submit>Find a Doctor</Button>
 							</form>
 						</div>
 					</div>
@@ -129,6 +129,5 @@ const HeroSection = (props) => {
 		</header>
 		);
 }
-
 
 export default HeroSection;

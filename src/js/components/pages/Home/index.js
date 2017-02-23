@@ -33,17 +33,17 @@ class Home extends React.Component {
 						<div className="icon-container find-icon">
 							<Icon iconId={FindIcon} />
 							<p>Find A Doctor</p>
-							<Button message="Start Searching" linkTo="#" buttonClass="btn-success"/> 
+							<Button linkTo="#" type="success">Start searching</Button>
 						</div>
 						<div className="icon-container medical-file-icon">
 							<Icon iconId={ClipboardIcon} />
 							<p>Complete Your Medical File</p>
-							<Button message="Complete Your File" linkTo="#" buttonClass="btn-success"/> 
+							<Button linkTo="#" type="success">Complete your file</Button>
 						</div>
 						<div className="icon-container doctor-icon">
 							<Icon iconId={DoctorIcon} />
 							<p>Get Consulted By An Expert</p>
-							<Button message="Talk to an expert" linkTo="#" buttonClass="btn-success"/> 
+							<Button linkTo="#" type="success">Talk to an expert</Button>
 						</div>
 					</div>
 					<svg data-star="1">

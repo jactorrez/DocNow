@@ -1,7 +1,7 @@
 import React from "react";
 
 const NavBar = (props) => (
-	<div>
+	<nav>
 		<div className="navbar">
 			<div className="navbar-top">
 				<a className="link" href="#">Download Our App</a>
@@ -19,7 +19,7 @@ const NavBar = (props) => (
 			</div>
 		</div>
 		{props.children}
-	</div>
+	</nav>
 	);
 
 export default NavBar;
